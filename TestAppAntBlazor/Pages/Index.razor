@@ -1,0 +1,43 @@
+﻿@page "/"
+
+<PageContainer Title="TEST">
+    <Select Mode="multiple"
+            Placeholder="Please select"
+            TItemValue="string"
+            TItem="string"
+            Style="width: 100%; margin-bottom: 8px;"
+            EnableSearch
+            AllowClear
+            MaxTagCount="2">
+        <SelectOptions>
+            @foreach (var item in _items)
+            {
+                <SelectOption TItemValue="string" TItem="string" Value=@item Label=@item />
+            }
+        </SelectOptions>
+    </Select>
+</PageContainer>
+
+
+
+@code
+{
+    List<string> _items = new List<string>();
+
+    protected override void OnInitialized()
+    {
+        _items.Add("Option1");
+        _items.Add("Option2");
+        _items.Add("Option3");
+        _items.Add("Option4");
+        _items.Add("Option5");
+        _items.Add("Option6");
+        _items.Add("Option7");
+        _items.Add("Option8");
+        _items.Add("Option9");
+        _items.Add("Option10");
+        _items.Add("Option11");
+        _items.Add("Option12");
+
+    }
+}
